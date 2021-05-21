@@ -32,8 +32,11 @@ public class SnakeLadder {
 			if (position < 0) {
 				position = 0;
 			}
-			System.out.println("you at" + position + "th" + "position");
+			if (position>100) {
+				position = newPosition;
+			}
 		}
-
+			System.out.println("you at" + position + "th" + "position");
+		
 	}
-}
+	}
