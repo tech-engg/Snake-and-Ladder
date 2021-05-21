@@ -10,7 +10,7 @@ public class SnakeLadder {
 		
 		int  rollDie = (int) (Math.random()*6)+1;
 		
-		System.out.println("rollDie"  +rollDie);
+		System.out.println("Die Roll "  +rollDie);
 	}
 
 }
