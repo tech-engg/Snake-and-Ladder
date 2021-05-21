@@ -13,25 +13,27 @@ public class SnakeLadder {
 		int position = 0;
 		int newPosition = 0;
 
-		int rollDie = (int) (Math.random() * 6) + 1;
-		int check = (int) (Math.random() * 3);
+		while (position < 100) {
+			int rollDie = (int) (Math.random() * 6) + 1;
+			int check = (int) (Math.random() * 3);
 
-		switch (check) {
-		case NO_PLAY:
-			newPosition = 0;
-			break;
-		case LADDER:
-			newPosition = +rollDie;
-			break;
-		case SNAKE:
-			newPosition = -rollDie;
-			break;
+			switch (check) {
+			case NO_PLAY:
+				newPosition = 0;
+				break;
+			case LADDER:
+				newPosition = +rollDie;
+				break;
+			case SNAKE:
+				newPosition = -rollDie;
+				break;
+			}
+			position = position + newPosition;
+			if (position < 0) {
+				position = 0;
+			}
+			System.out.println("you at" + position + "th" + "position");
 		}
-		position = position+newPosition;
-		if(position<0) {
-			 position = 0; 
-		}
-		System.out.println("you at" + position +"th"+"position");
+
 	}
-
 }
